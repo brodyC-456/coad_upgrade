@@ -3,6 +3,7 @@ Hunter Scholz | Brody Couture
 # Step-By-Step at the bottom
 
 **Our process**
+
 We created a new repo to hold the upgraded COAD, following the instructions in the exercise (with some difficulty). We had to make a new Rail App with the newer version to copy over.
 
 **Our first step was to ask ChatGPT for a gameplan on how to get the old app working in the new version, telling it which versions we started and ended with.**
