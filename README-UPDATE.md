@@ -1,5 +1,8 @@
 Hunter Scholz | Brody Couture
 
+# Step-By-Step at the bottom
+
+**Our process**
 We created a new repo to hold the upgraded COAD, following the instructions in the exercise (with some difficulty). We had to make a new Rail App with the newer version to copy over.
 
 **Our first step was to ask ChatGPT for a gameplan on how to get the old app working in the new version, telling it which versions we started and ended with.**
@@ -20,4 +23,55 @@ We created a new repo to hold the upgraded COAD, following the instructions in t
 **14. Throw in the towel and use Claude.**
 15. Asked Claude for help in updating the code to Rails 8.1.2.
 16. Allowed Claude to update, fix, and edit any code or errors caused by the update.
-17. Copy over `spec_helper.rb`, `rails_helper.rb`, and `.rspec` from the original.
+    * Copy over `spec_helper.rb`, `rails_helper.rb`, and `.rspec` from the original.
+    * Copy over factories and spec files.
+    * Update rspec configuration.
+    * Migrate the helpers, models, controllers, factories, and test stubs.
+    * Ensure all tests are working correctly.
+    * Verify the GemFile.
+    * Update enum syntax in all the files.
+17. Run `bundle exec rails assets:clobber` in the container.
+18. Ran `RAILS_ENV=test bundle exec rails assets:precompile` in the container, which did not work
+19. In `aplications.js`, changes `require_tree` to `.js`, and then run the above function again.
+20. Ask Claude to fix and update the code again but this time we asked really really nicely.
+21. hey so that js change from earlier was just wrong undo that.
+22. Copied over the tests that claude missed because its dumb
+23. asked claude to fix the errors in the test suite (dont worry the step by step is coming soon i swear)
+
+
+# Rails 5.2 to Rails 8.1 Migration Manual
+_Prerequisites_
+* Docker installed
+* Basic understanding of Rails and Git
+**Phase 1: Setup**
+* Clone or backup your Rails 5.2 project
+* Update Gemfile: Change Rails version to 8.1.2
+* Update Ruby version in Dockerfile or .ruby-version to 3.4.8 or higher
+* Run bundle update to install new gems
+* Run rails app:upgrade (Rails provides an upgrade task)
+**Phase 2: Model Updates**
+* Find all enum definitions in your models
+* Convert from old syntax to new syntax:
+    * Old: enum status: [:approved, :rejected]
+    * New: enum :status, { approved: 0, rejected: 1 }
+    * Test: rails console and verify enums work
+**Phase 3: Asset Pipeline**
+* Remove //= require turbolinks from application.js
+  * Add //= link application.css to manifest.js
+* Remove 'data-turbolinks-track': 'reload' attributes from your layout views
+  * Delete any .coffee files (CoffeeScript is not supported in Rails 8)
+**Phase 4: Test Configuration**
+* Update rails_helper.rb: Change config.fixture_path to config.fixture_paths (array)
+* Update test environment config: Set config.action_controller.raise_on_missing_callback_actions = false
+* Create spec/support/capybara.rb with proper test driver configuration
+* Update your gems: Ensure RSpec 6.0+, Capybara, FactoryBot latest versions
+**Phase 5: Database & Verification**
+* Run database migrations: rails db:migrate
+* Run tests: bundle exec rspec
+* Start server and manually test key flows
+* Check browser console for JavaScript errors
+**Phase 6: Deployment**
+* Update CI/CD pipeline for new Rails version
+* Deploy to staging first
+* Verify all features work
+* Deploy to production
