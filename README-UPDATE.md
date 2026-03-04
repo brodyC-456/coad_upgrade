@@ -3,6 +3,7 @@ Hunter Scholz | Brody Couture
 # Step-By-Step at the bottom
 
 **Our process**
+
 We created a new repo to hold the upgraded COAD, following the instructions in the exercise (with some difficulty). We had to make a new Rail App with the newer version to copy over.
 
 **Our first step was to ask ChatGPT for a gameplan on how to get the old app working in the new version, telling it which versions we started and ended with.**
@@ -20,6 +21,7 @@ We created a new repo to hold the upgraded COAD, following the instructions in t
 11. Checked in the rest of the files to look for enum errors, doing the same thing in `organization.rb`.
 12. Dumped the controller code into ChatGPT to check for errors.
 13. In `organization-controller` we removed `.to_h`.
+
 **14. Throw in the towel and use Claude.**
 15. Asked Claude for help in updating the code to Rails 8.1.2.
 16. Allowed Claude to update, fix, and edit any code or errors caused by the update.
