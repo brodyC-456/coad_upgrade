@@ -171,7 +171,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    haml (6.1.4)
+    haml (7.2.0)
       temple (>= 0.8.2)
       thor
       tilt
@@ -510,7 +510,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.8.1)
   factory_bot_rails (~> 6.3)
   guard-rspec
-  haml (~> 6.1.1)
+  haml (~> 7.2.0)
   haml-rails (~> 2.1.0)
   image_processing (~> 1.2)
   jbuilder (~> 2.5)
