@@ -30,7 +30,7 @@ gem 'devise', '~> 5.0'
 
 # Templating
 gem "haml", "~> 6.1.1"
-gem "haml-rails", "~> 2.1.0"
+gem "haml-rails", "~> 3.0.0"
 
 # APIs / JSON
 gem "jbuilder", "~> 2.5"
