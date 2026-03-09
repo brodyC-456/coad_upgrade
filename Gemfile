@@ -29,7 +29,7 @@ gem "airbrake", "~> 13.0.3"
 gem 'devise', '~> 5.0'
 
 # Templating
-gem "haml", "~> 6.1.1"
+gem "haml", "~> 7.2.0"
 gem "haml-rails", "~> 2.1.0"
 
 # APIs / JSON
