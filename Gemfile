@@ -57,7 +57,7 @@ group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "dotenv-rails", "~> 2.8.1"
   gem "factory_bot_rails", "~> 6.3"
-  gem "rspec-rails", "~> 6.0" # update for Rails 8
+  gem "rspec-rails", "~> 8.0" # update for Rails 8
   gem "debug", platforms: %i[mri windows], require: "debug/prelude"
   gem "bundler-audit", require: false
   gem "brakeman", require: false
