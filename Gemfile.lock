@@ -265,7 +265,10 @@ GEM
       shellany (~> 0.0)
     observer (0.1.2)
     orm_adapter (0.5.0)
-    pagy (6.0.4)
+    pagy (43.3.1)
+      json
+      uri
+      yaml
     parallel (1.27.0)
     parser (3.3.10.2)
       ast (~> 2.4.1)
@@ -484,6 +487,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    yaml (0.4.0)
     zeitwerk (2.7.5)
 
 PLATFORMS
@@ -518,7 +522,7 @@ DEPENDENCIES
   letter_opener
   listen
   observer
-  pagy (~> 6.0.0)
+  pagy (~> 43.3.1)
   phony_rails (~> 0.15.0)
   propshaft
   puma (>= 5.0)
