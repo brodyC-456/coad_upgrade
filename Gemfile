@@ -17,7 +17,7 @@ gem "sassc-rails" # keep for SCSS support
 
 # JS & frontend
 gem "jquery-rails" # optional if you still use jQuery
-gem "bootstrap", "~> 4.4.1"
+gem "bootstrap", "~> 5.3.8"
 
 # Active Storage
 gem "image_processing", "~> 1.2"
