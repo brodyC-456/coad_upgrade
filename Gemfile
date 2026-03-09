@@ -36,7 +36,7 @@ gem "haml-rails", "~> 2.1.0"
 gem "jbuilder", "~> 2.5"
 
 # Pagination & phone
-gem "pagy", "~> 6.0.0"
+gem "pagy", "~> 43.3.1"
 gem "phony_rails", "~> 0.15.0"
 
 # CAPTCHA
