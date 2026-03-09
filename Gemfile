@@ -55,7 +55,7 @@ gem 'observer', require: true
 # Development & debugging
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
-  gem "dotenv-rails", "~> 2.8.1"
+  gem "dotenv-rails", "~> 3.2.0"
   gem "factory_bot_rails", "~> 6.3"
   gem "rspec-rails", "~> 6.0" # update for Rails 8
   gem "debug", platforms: %i[mri windows], require: "debug/prelude"
