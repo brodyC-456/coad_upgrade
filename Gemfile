@@ -40,7 +40,7 @@ gem "pagy", "~> 6.0.0"
 gem "phony_rails", "~> 0.15.0"
 
 # CAPTCHA
-gem "recaptcha", "~> 5.12.3", require: "recaptcha/rails"
+gem "recaptcha", "~> 5.21.1", require: "recaptcha/rails"
 
 # Caching & performance
 gem "bootsnap", require: false
